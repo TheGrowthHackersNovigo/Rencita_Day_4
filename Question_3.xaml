@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,3575.2" sap2010:WorkflowViewState.IdRef="Question_3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,3285.6" sap2010:WorkflowViewState.IdRef="Question_3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -37,7 +37,12 @@
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -46,40 +51,32 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Get the full name in the format &quot;FirstName LastName&quot;.&#xA;• Split the full name into first name and last name.&#xA;• Convert both names to lowercase.&#xA;• Combine them to form an email address in the format &quot;firstname.lastname@company.com&quot;.&#xA;• Display the generated email address using a message box.&#xA;" DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="688,3510.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Get the full name in the format &quot;FirstName LastName&quot;.&#xA;• Split the full name into first name and last name.&#xA;• Convert both names to lowercase.&#xA;• Combine them to form an email address in the format &quot;firstname.lastname@company.com&quot;.&#xA;• Display the generated email address using a message box.&#xA;" DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="688,3220.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FirstName" />
       <Variable x:TypeArguments="x:String" Name="SecondName" />
@@ -99,9 +96,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This activity will run til user gives correct input" Condition="[IsCorrect]" CurrentIndex="[index]" DisplayName="While : Ask users Input" sap:VirtualizedContainerService.HintSize="625.6,3313.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This activity will run til user gives correct input" Condition="[IsCorrect]" CurrentIndex="[index]" DisplayName="While : Ask users Input" sap:VirtualizedContainerService.HintSize="625.6,3024" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="3">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body : Execute " sap:VirtualizedContainerService.HintSize="592,3144.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Body : Execute " sap:VirtualizedContainerService.HintSize="592,2855.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="Name" />
             <Variable x:TypeArguments="x:String" Name="UserSelected" />
@@ -158,17 +155,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <If sap2010:Annotation.AnnotationText="This activity executes once user gives correct name " Condition="[UserSelected  = &quot;Yes&quot;]" DisplayName="If : isCorrect " sap:VirtualizedContainerService.HintSize="529.6,1947.2" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap2010:Annotation.AnnotationText="This activity executes once user gives correct name " Condition="[UserSelected  = &quot;Yes&quot;]" DisplayName="If : isCorrect " sap:VirtualizedContainerService.HintSize="529.6,1657.6" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap2010:Annotation.AnnotationText="This will create emal Id" DisplayName="Then : Email" sap:VirtualizedContainerService.HintSize="496,1494.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap2010:Annotation.AnnotationText="This will create emal Id" DisplayName="Then : Email" sap:VirtualizedContainerService.HintSize="496,1204.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
-                  <Variable x:TypeArguments="x:String" Name="UsersFirstName" />
-                  <Variable x:TypeArguments="x:String" Name="UsersSecondName" />
                   <Variable x:TypeArguments="x:String" Name="emailID" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
@@ -190,40 +185,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <Assign sap2010:Annotation.AnnotationText="This activity is used to  get users first name " DisplayName="Assign : Retrieve first name " sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_2">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[UsersFirstName]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[Name.Split(" ")(0)]</InArgument>
-                  </Assign.Value>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Assign>
-                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message about users first name " DisplayName="Log Message : First name " sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[UsersFirstName + &quot; Is users frst name &quot;]">
+                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message about users first name " DisplayName="Log Message : First name " sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[FirstName + &quot; Is your first name &quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <Assign sap2010:Annotation.AnnotationText="This activity is used to  retrieve users second name" DisplayName="Assign : second name " sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_3">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[UsersSecondName]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[Name.Split(" ")(1)]</InArgument>
-                  </Assign.Value>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Assign>
-                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message about users second name " DisplayName="Log Message : Second name " sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[UsersSecondName]">
+                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message about users second name " DisplayName="Log Message : Second name " sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[SecondName + &quot; Is your second name&quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -235,7 +204,7 @@
                     <OutArgument x:TypeArguments="x:String">[emailID]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[UsersFirstName + UsersSecondName + "@company.com"]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[FirstName.ToLower +SecondName.ToLower + "@company.com"]</InArgument>
                   </Assign.Value>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -267,7 +236,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to ask user re-enter the details" AutoCloseAfter="00:00:00" DisplayName="Message Box : Enter details again " sap:VirtualizedContainerService.HintSize="353.6,140" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please enter your name&quot;]">
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to ask user re-enter the details" AutoCloseAfter="00:00:00" DisplayName="Message Box : Enter details again " sap:VirtualizedContainerService.HintSize="353.6,140" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot; maximum attempts!!&quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

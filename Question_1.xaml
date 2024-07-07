@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_1" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2176" sap2010:WorkflowViewState.IdRef="Question_1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_1" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,3869.6" sap2010:WorkflowViewState.IdRef="Question_1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -30,6 +30,7 @@
       <x:String>UiPath.Activities.System.Collections</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -38,7 +39,12 @@
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -47,42 +53,36 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Create a List Collection of type List(of string)&#xA;• Add new Item to the collection&#xA;• Check Given element exists in list or not&#xA;• Remove item from the list&#xA;• Clear the list&#xA;" DisplayName="Question 1" sap:VirtualizedContainerService.HintSize="496,2111.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="• Create a List Collection of type List(of string)&#xA;• Add new Item to the collection&#xA;• Check Given element exists in list or not&#xA;• Remove item from the list&#xA;• Clear the list&#xA;" DisplayName="Question 1" sap:VirtualizedContainerService.HintSize="512,3804.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String) From {&quot;Bangalore&quot;, &quot;Mangalore&quot;, &quot;Hubli&quot;}]" Name="ListOfCity" />
       <Variable x:TypeArguments="x:Boolean" Name="IsExist" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="result">
+      <Variable x:TypeArguments="scg:List(x:String)" Name="Result">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:String x:Key="SourceIdRef">RemoveFromCollection`1_1</x:String>
@@ -90,7 +90,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="itemIndex">
+      <Variable x:TypeArguments="x:Int32" Name="ItemIndex">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:String x:Key="SourceIdRef">AppendItemToList`1_1</x:String>
@@ -98,6 +98,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="ClearedList" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -106,74 +107,150 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This collection is used to log message that list is created " DisplayName="Log Message : Create collection" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;List of city is created &quot; + String.Join(&quot; , &quot; , ListOfCity)]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This collection is used to log message that list is created " DisplayName="Log Message : Create collection" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;List of city is created &quot; + String.Join(&quot; , &quot; , ListOfCity)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uasa:AppendItemToList x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="This activity is used to append Mysore city to the list " DisplayName="Append Item to List : Append Mysore" sap:VirtualizedContainerService.HintSize="433.6,198.4" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_1" ItemIndex="[itemIndex]" ItemToAppend="Mysore" List="[ListOfCity]">
+    <uasa:AppendItemToList x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="This activity is used to append Mysore city to the list " DisplayName="Append Item to List : Append Mysore" sap:VirtualizedContainerService.HintSize="449.6,198.4" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_1" ItemIndex="[itemIndex]" ItemToAppend="Mysore" List="[ListOfCity]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uasa:AppendItemToList>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to append Mysore city to the list " DisplayName="Log Message : Append Mysore" sap:VirtualizedContainerService.HintSize="433.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Mysore city is added &quot;  + String.Join(&quot; , &quot; , ListOfCity)]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to append Mysore city to the list " DisplayName="Log Message : Append Mysore" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Mysore city is added &quot;  + String.Join(&quot; , &quot; , ListOfCity)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uasc:ExistsInCollection x:TypeArguments="x:String" Index="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to check if bangalore city exist in Collection" Collection="[ListOfCity]" DisplayName="Exists In Collection : Check for Bangalore" Exists="[IsExist]" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_1" Item="Bangalore">
+    <uasc:ExistsInCollection x:TypeArguments="x:String" Index="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to check if bangalore city exist in Collection" Collection="[ListOfCity]" DisplayName="Exists In Collection : Check for Bangalore" Exists="[IsExist]" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_1" Item="Bangalore">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uasc:ExistsInCollection>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to check if bangalore city exist in Collection" DisplayName="Log Message : Check for Bangalore" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot; Bangalore city exist in collection - &quot;  +  IsExist.ToString]">
+    <If sap2010:Annotation.AnnotationText="This activity is used to check if Bangalore City exist in the collection or no " Condition="[IsExist]" DisplayName="If  - Bangalore exist or no " sap:VirtualizedContainerService.HintSize="449.6,1184" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:LogMessage>
-    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to remove Mangalore city from the collection" Collection="[ListOfCity]" DisplayName="Remove From Collection : Mangalore" sap:VirtualizedContainerService.HintSize="433.6,295.2" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="Mangalore" RemoveAllElements="False" Result="[result]">
+      <If.Then>
+        <Sequence sap2010:Annotation.AnnotationText="This activity is displayed if bangalore city exist in collection" DisplayName="Then : Exist" sap:VirtualizedContainerService.HintSize="416,491.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to display Bangalore city exist in collection" AutoCloseAfter="00:00:00" DisplayName="Message Box : Diplay Bangalore exist" sap:VirtualizedContainerService.HintSize="353.6,161.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Bangalore city exist in collection&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that bangalore city exist in collection" DisplayName="Log Message :  Bangalore Exist" sap:VirtualizedContainerService.HintSize="353.6,209.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot; Bangalore city exist in collection  &quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:Annotation.AnnotationText="This is executed if bangalore city doesnt exist in collection" DisplayName="Else : Bangalore city doesnt exist " sap:VirtualizedContainerService.HintSize="416,491.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This collection is used to display Bangalore city doesnt exist in the collection" AutoCloseAfter="00:00:00" DisplayName="Message Box : Doesnt exist" sap:VirtualizedContainerService.HintSize="353.6,161.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Bangalore city doesnt exist in the collection&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to check if bangalore city exist in Collection" DisplayName="Log Message : Bangalore doesnt exist" sap:VirtualizedContainerService.HintSize="353.6,209.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Bangalore city doesnt exist in the collection&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Else>
+    </If>
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to remove Mangalore city from the collection" Collection="[ListOfCity]" DisplayName="Remove From Collection : Mangalore" sap:VirtualizedContainerService.HintSize="449.6,295.2" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="Mangalore" RemoveAllElements="False" Result="[result]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uasc:RemoveFromCollection>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to remove Mangalore city from the collection" DisplayName="Log Message : Mangalore" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Mangalore city is removed from collection&quot;  + String.Join(&quot; , &quot; , ListOfCity)]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to remove Mangalore city from the collection" DisplayName="Log Message : Mangalore" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Mangalore city is removed from collection&quot;  + String.Join(&quot; , &quot; , ListOfCity)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign sap2010:Annotation.AnnotationText="This activity clears the list " DisplayName="Assign : Used to clear the list" sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="scg:List(x:String)">[ListOfCity]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[Nothing]</InArgument>
-      </Assign.Value>
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" Item="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to clear collection" Collection="[ListOfCity]" DisplayName="Remove From Collection :Clear List" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_4" RemoveAllElements="True" Result="[ClearedList]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that list is cleared " DisplayName="Log Message : List cleared" sap:VirtualizedContainerService.HintSize="433.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;The list is cleared&quot;]">
+    </uasc:RemoveFromCollection>
+    <If sap2010:Annotation.AnnotationText="This activity is used to check if list is empty" Condition="[ClearedList.Count &gt;0]" DisplayName="If - List is empty" sap:VirtualizedContainerService.HintSize="449.6,839.2" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:LogMessage>
+      <If.Then>
+        <Sequence sap2010:Annotation.AnnotationText="This activity is executed if list is not empty" DisplayName="Then : List is not empty" sap:VirtualizedContainerService.HintSize="416,329.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that list is  not cleared " DisplayName=" Log Message : List not cleared" sap:VirtualizedContainerService.HintSize="353.6,209.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;The list is  not cleared&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:Annotation.AnnotationText="This activity is executed when list is clear " DisplayName="Else : List is clear" sap:VirtualizedContainerService.HintSize="416,316.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message that list is cleared " DisplayName="Log Message : List cleared" sap:VirtualizedContainerService.HintSize="353.6,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;The list is cleared&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>
