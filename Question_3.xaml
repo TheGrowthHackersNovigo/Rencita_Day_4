@@ -79,15 +79,11 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Get the full name in the format &quot;FirstName LastName&quot;.&#xD;&#xA;• Split the full name into first name and last name.&#xD;&#xA;• Convert both names to lowercase.&#xD;&#xA;• Combine them to form an email address in the format &quot;firstname.lastname@company.com&quot;.&#xD;&#xA;• Display the generated email address using a message box.&#xD;&#xA;" DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="688,3510.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Get the full name in the format &quot;FirstName LastName&quot;.&#xA;• Split the full name into first name and last name.&#xA;• Convert both names to lowercase.&#xA;• Combine them to form an email address in the format &quot;firstname.lastname@company.com&quot;.&#xA;• Display the generated email address using a message box.&#xA;" DisplayName="Question_3" sap:VirtualizedContainerService.HintSize="688,3510.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FirstName" />
       <Variable x:TypeArguments="x:String" Name="SecondName" />
-      <Variable x:TypeArguments="x:Boolean" Name="IsCorrect">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="IsCorrect" />
       <Variable x:TypeArguments="x:Int32" Name="index">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -103,7 +99,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This activity will run til user gives correct input" CurrentIndex="[index]" DisplayName="While : Ask users Input" sap:VirtualizedContainerService.HintSize="625.6,3313.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This activity will run til user gives correct input" Condition="[IsCorrect]" CurrentIndex="[index]" DisplayName="While : Ask users Input" sap:VirtualizedContainerService.HintSize="625.6,3313.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body : Execute " sap:VirtualizedContainerService.HintSize="592,3144.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
@@ -247,7 +243,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to  display email Id" AutoCloseAfter="00:00:00" DisplayName="Message Box : Display email" sap:VirtualizedContainerService.HintSize="433.6,148.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Your email ID is&quot; + emailID]">
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to  display email Id" AutoCloseAfter="00:00:00" DisplayName="Message Box : Display email" sap:VirtualizedContainerService.HintSize="433.6,148.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Your email ID is &quot; + emailID]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -283,9 +279,6 @@
           </If>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="IsCorrect" />
-      </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

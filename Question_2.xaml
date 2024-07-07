@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2495.2" sap2010:WorkflowViewState.IdRef="Question_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2612.8" sap2010:WorkflowViewState.IdRef="Question_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -80,18 +80,10 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• create a Dictionary of students&#xD;&#xA;&#xD;&#xA;• Add &quot;Eve&quot; with a grade of 90 to the dictionary and display it in the message box.&#xD;&#xA;&#xD;&#xA;• Update Bob's grade to 95 in the dictionary and display the result in the message box.&#xD;&#xA;• students with grades greater than or equal to 90 and store the result in a new dictionary and display the new dictionary result in the message box&#xD;&#xA;" DisplayName="Question_2" sap:VirtualizedContainerService.HintSize="688,2430.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• create a Dictionary of students&#xA;&#xA;• Add &quot;Eve&quot; with a grade of 90 to the dictionary and display it in the message box.&#xA;&#xA;• Update Bob's grade to 95 in the dictionary and display the result in the message box.&#xA;• students with grades greater than or equal to 90 and store the result in a new dictionary and display the new dictionary result in the message box&#xA;" DisplayName="Question_2" sap:VirtualizedContainerService.HintSize="688,2548" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="DictionaryOfStudentsGrade">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Int32)" ExpressionText="New Dictionary(Of String, Integer) From {{&quot;Alice&quot;, 85}, {&quot;Bob&quot;, 92}, {&quot;Charlie&quot;, 78}, {&quot;David&quot;, 88}}" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="DistinctiionStudents">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Int32)" ExpressionText="New Dictionary(Of String, Integer)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Default="[New Dictionary(Of String, Integer) From {{&quot;Alice&quot;, 85}, {&quot;Bob&quot;, 92}, {&quot;Charlie&quot;, 78}, {&quot;David&quot;, 88}}]" Name="DictionaryOfStudentsGrade" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Default="[New Dictionary(Of String, Integer)]" Name="DistinctiionStudents" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -99,6 +91,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Display dictionary" sap:VirtualizedContainerService.HintSize="625.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[String.Join(&quot; &quot;, DictionaryOfStudentsGrade )]" />
     <Assign sap2010:Annotation.AnnotationText="This activity is used to add Eve's data to Dictionary" DisplayName="Assign : Add Eve" sap:VirtualizedContainerService.HintSize="625.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[DictionaryOfStudentsGrade("Eve")]</OutArgument>
@@ -203,7 +196,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="625.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[String.Join(&quot; &quot;, DictionaryOfStudentsGrade )]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="625.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[String.Join(&quot; &quot;,  DistinctiionStudents)]" />
     <ui:LogMessage DisplayName="Log Message : Print" sap:VirtualizedContainerService.HintSize="625.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;This logs a message of distionary data &quot; + String.Join(&quot; &quot;, DictionaryOfStudentsGrade )]" />
   </Sequence>
 </Activity>

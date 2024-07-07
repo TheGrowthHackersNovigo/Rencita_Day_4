@@ -78,7 +78,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Use an Input Dialog activity to ask for the user's name.&#xD;&#xA;• Use another Input Dialog activity to ask for the user's age.&#xD;&#xA;• Format a greeting message (e.g., &quot;Hello, [Name]! You are [Age] years old.&quot;).&#xD;&#xA;• Display the formatted message using a Message Box activity." DisplayName="Question_5" sap:VirtualizedContainerService.HintSize="688,2763.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap2010:Annotation.AnnotationText="• Use an Input Dialog activity to ask for the user's name.&#xA;• Use another Input Dialog activity to ask for the user's age.&#xA;• Format a greeting message (e.g., &quot;Hello, [Name]! You are [Age] years old.&quot;).&#xA;• Display the formatted message using a Message Box activity." DisplayName="Question_5" sap:VirtualizedContainerService.HintSize="688,2763.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FirstName" />
       <Variable x:TypeArguments="x:String" Name="SecondName" />
@@ -112,7 +112,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to  ask users first name" DisplayName="Input Dialog : First name " sap:VirtualizedContainerService.HintSize="529.6,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="Enter your First name " Title="Generate email">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to  ask users first name" DisplayName="Input Dialog : First name " sap:VirtualizedContainerService.HintSize="529.6,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="Enter your First name " Title="name and age">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[FirstName]</OutArgument>
             </ui:InputDialog.Result>
@@ -129,7 +129,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to  ask users second name " DisplayName="Input Dialog : Second " sap:VirtualizedContainerService.HintSize="529.6,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="Enter your Second name " Title="Generate Email">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to  ask users second name " DisplayName="Input Dialog : Second " sap:VirtualizedContainerService.HintSize="529.6,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="Enter your age " Title="name and age">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:Int32">[Age]</OutArgument>
             </ui:InputDialog.Result>
